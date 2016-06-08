@@ -13,11 +13,18 @@ file(GLOB RPLIDAR "../deps/rplidar/include/*.h"
                    "../deps/rplidar/src/hal/*.cpp"
                     "../deps/rplidar/src/arch/win32/*.cpp"
                    "../deps/rplidar/src/arch/win32/*.h"
-                   "../deps/rplidar/src/arch/win32/*.hpp")
+                   "../deps/rplidar/src/arch/win32/*.hpp"
+                   "../deps/adt/source/include/ADT_Base.hpp"
+                   "../deps/adt/source/include/Angle.hpp"
+                   "../deps/adt/source/include/Length.hpp"
+                   "../deps/adt/source/src/Angle.cpp"
+                   "../deps/adt/source/src/Length.cpp"
+                   )
 
 include_directories(
   ../deps/rplidar/include
-  ../deps/rplidar/src)
+  ../deps/rplidar/src
+  ../deps/adt/source/include)
 
 
 

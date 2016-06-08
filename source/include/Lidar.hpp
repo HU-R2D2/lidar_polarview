@@ -1,20 +1,22 @@
-#include PolarView
-class Lidar : public LocatedDistanceSensor{
+#ifndef LIDAR_H
+#define LIDAR_H
+
+#include "../../../deps/adt/source/include/ADT_Base.hpp"
+#include "../../../deps/adt/source/include/Angle.hpp"
+#include "../../../deps/adt/source/include/Length.hpp"
+#include "../../../deps/polarview/source/include/polarview.hpp"
+#include "../../../deps/polarview/source/include/DistanceReading.hpp"
+
+class Lidar {
 
 public:
-	Lidar (double factor, CoordinateBearing coordinate_bearing);
-
-	SensorResult get_data() override {
-		std::vector<r2d2::Angle,r2d2::Length > Angles = comminucatie_stub.get_angles();
-		PolarView v();
-		for (int i = 0; i < size(Angles); i++){
-			v.add_distancereading(Angles[i], r2d2::Length len,
-                             DistanceReading::ResultType type);
-		}
-	}
+	//Lidar (double factor, CoordinateBearing coordinate_bearing);
+	Lidar(){};
+	//SensorResult get_data() override;
 
 
 
 private:
-	Comminucatie comminucatie_stub = new Comminucatie();
-}
+	//Comminucatie comminucatie_stub = new Comminucatie();
+};
+#endif
