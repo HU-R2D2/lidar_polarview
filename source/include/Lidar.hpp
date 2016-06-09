@@ -7,7 +7,7 @@
 #include "../../../deps/polarview/source/include/polarview.hpp"
 #include "../../../deps/polarview/source/include/DistanceReading.hpp"
 
-class Lidar {
+class Lidar :  {
 
 public:
 	//Lidar (double factor, CoordinateBearing coordinate_bearing);
