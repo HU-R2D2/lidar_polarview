@@ -1,18 +1,20 @@
 #ifndef LIDAR_H
 #define LIDAR_H
 
-#include "../../../deps/adt/source/include/ADT_Base.hpp"
-#include "../../../deps/adt/source/include/Angle.hpp"
-#include "../../../deps/adt/source/include/Length.hpp"
-#include "../../../deps/polarview/source/include/polarview.hpp"
-#include "../../../deps/polarview/source/include/DistanceReading.hpp"
+#include "ADT_Base.hpp"
+#include "Angle.hpp"
+#include "Length.hpp"
+#include "polarview.hpp"
+#include "DistanceReading.hpp"
+#include "CoordinateAttitude.hpp"
+#include "LocatedDistanceSensor.hpp"
 
-class Lidar :  {
+
+class Lidar : public r2d2::LocatedDistanceSensor {
 
 public:
-	//Lidar (double factor, CoordinateBearing coordinate_bearing);
-	Lidar(){};
-	//SensorResult get_data() override;
+	Lidar (double error, r2d2::CoordinateAttitude coordinate_attitude);
+	SensorResult get_data() override;
 
 
 
