@@ -14,7 +14,7 @@ class Lidar : public r2d2::LocatedDistanceSensor {
 
 public:
 	Lidar (double error, r2d2::CoordinateAttitude coordinate_attitude);
-	SensorResult get_data() override;
+	r2d2::DistanceSensor::SensorResult get_data() override;
 
 
 
