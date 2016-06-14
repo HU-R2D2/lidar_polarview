@@ -15,10 +15,10 @@ class Lidar : public r2d2::LocatedDistanceSensor {
 public:
 	Lidar (double error, r2d2::CoordinateAttitude coordinate_attitude);
 	r2d2::DistanceSensor::SensorResult get_data() override;
-
+	
 
 
 private:
-	//Comminucatie comminucatie_stub = new Comminucatie();
+	comminucatie_stub comm = new comminucatie_stub();
 };
 #endif
