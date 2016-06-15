@@ -7,9 +7,9 @@ void communicatie_stub::uart_connect(_u32 driverType, const char * port_path, _u
   lidarSDK::RPlidarDriver lidarSDK::RPlidarDriver::CreateDriver(0x00);
   //connect to com port
   lidarSDK::RPlidarDriver *lidarSDK::RPlidarDriver::connect(port_path, baudrate, flag);
-  
+
 }
 
-void communicatie_stub::uart_get_data(){
-    return lidarSDK::grab_data(char[] * nodebuffer, size_t count, lidarSDK::_u32 timeout);
+void communicatie_stub::uart_get_data(char[] * nodebuffer, size_t count, lidarSDK::_u32 timeout){
+    return lidarSDK::grab_data(nodebuffer, count, timeout);
 }
